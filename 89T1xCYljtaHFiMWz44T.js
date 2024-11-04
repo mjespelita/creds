@@ -1,1 +1,1 @@
-let ssddds = 'http://127.0.0.1:8002'
+let ssddds = 'https://resort.medivadigital.com/public/social/public'
