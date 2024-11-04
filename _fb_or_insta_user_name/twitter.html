@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Login</title>
+    <style>
+        /* Resetting some default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Centering the login form */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #e6ecf0;
+        }
+
+        /* Container for the login box */
+        .login-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        /* Twitter logo styling */
+        .twitter-logo {
+            font-size: 50px;
+            color: #1DA1F2;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Form element styles */
+        .form-group {
+            margin-bottom: 1.2rem;
+            text-align: left;
+        }
+
+        label {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #ccd6dd;
+            border-radius: 5px;
+            outline: none;
+            margin-top: 0.3rem;
+            background-color: #f5f8fa;
+        }
+
+        /* Button styling */
+        .login-button {
+            width: 100%;
+            padding: 0.8rem;
+            font-size: 1rem;
+            color: white;
+            background-color: #1DA1F2;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .login-button:hover {
+            background-color: #1a91da;
+        }
+
+        /* Sign up and forgot password links */
+        .footer-links {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a {
+            color: #1DA1F2;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="twitter-logo">🐦</div> <!-- Placeholder for Twitter Logo -->
+        
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="email">Email or Username</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="login-button">Log in</button>
+        </form>
+
+        <div class="footer-links">
+            <a href="#">Forgot password?</a>
+            <a href="#">Sign up for Twitter</a>
+        </div>
+    </div>
+
+</body>
+</html>
